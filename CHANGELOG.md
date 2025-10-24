@@ -376,3 +376,7 @@ contract_call_local_pb2.ContractLoginfo -> contract_types_pb2.ContractLoginfo
 ### Removed
 
 - N/A
+## [Unreleased]
+
+### Docs
+- docs(signing): add "Rebasing and Signing" section with signed rebase instructions ([#555](link-to-pr))
