@@ -94,3 +94,25 @@ git push --force-with-lease
 If you run into issues:
 
 - Refer to [GitHub’s GPG Docs](https://docs.github.com/en/authentication/managing-commit-signature-verification)
+
+---
+##  Rebasing and Signing
+When your branch falls behind the upstream `main`, a **rebase** will often be required.  
+Before rebasing, make sure your `main` branch is up to date — you can follow the steps in [rebasing.md](./rebasing.md).
+
+While rebasing, you **must** sign all commits again to preserve verification status.  
+Use the following command:
+```bash
+git rebase main -S
+```
+
+❌ Avoid using:
+```bash
+git rebase main
+```
+or
+```bash
+git merge main
+```
+If you do not use the `-S` flag during rebase, your commits will **not** remain verified after rebasing.  
+Always verify the green “Verified” badge appears on all commits after your rebase is complete.
